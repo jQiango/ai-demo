@@ -28,6 +28,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jQiango"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:jQiango/ai-demo.git",
+    "accountId": "1278bda7-3621-4be4-8342-1fe293f07369"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://E:/repository/org/springframework/ai/spring-ai-core/1.0.0-M3/spring-ai-core-1.0.0-M3-sources.jar!/org/springframework/ai/chat/client/ChatClient.java" root0="SKIP_INSPECTION" />
     <setting file="jar://E:/repository/org/springframework/ai/spring-ai-core/1.0.0-M3/spring-ai-core-1.0.0-M3.jar!/org/springframework/ai/chat/client/ChatClient.class" root0="SKIP_INSPECTION" />
@@ -53,12 +65,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.demo [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.DemoApplication.executor": "Debug",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/wangj/Desktop/demo",
@@ -115,6 +130,7 @@
       <workItem from="1731832644727" duration="19995000" />
       <workItem from="1731956238447" duration="9830000" />
       <workItem from="1732475431698" duration="168000" />
+      <workItem from="1732475607161" duration="195000" />
     </task>
     <task id="LOCAL-00001" summary="master">
       <option name="closed" value="true" />
@@ -172,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732475346864</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="master">
+      <option name="closed" value="true" />
+      <created>1732475652070</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732475652070</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
