@@ -14,29 +14,27 @@ import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
+
 @RestController
 @RequestMapping("ai")
-public class TestController {
+public class HelloController {
 
-    private final ChatClient chatClient;
+    private final ChatClient defaultChatClient;
 
-        public TestController(ChatClient.Builder builder) {
-          SimpleLoggerAdvisor simpleLoggerAdvisor = new SimpleLoggerAdvisor(
+    public HelloController(ChatClient.Builder builder) {
+        SimpleLoggerAdvisor simpleLoggerAdvisor = new SimpleLoggerAdvisor(
                 request -> "Prompt: " + request.userText(),
                 response -> "Result: " + response.getResult());
-          builder.defaultAdvisors(simpleLoggerAdvisor)
-                  .defaultSystem("你是一个著名的导演，用国内著名导演{user}的声音描述一些电影相关的问题。");
-
-        this.chatClient = builder.build();
+        builder.defaultAdvisors(simpleLoggerAdvisor);
+        this.defaultChatClient = builder.build();
     }
 
 
     //使用自动配置的ChatClient
     @GetMapping("/hello")
     public String generation(@RequestParam String userInput) {
-        String content = this.chatClient
+        String content = this.defaultChatClient
                 //提示词
                 .prompt()
                 //用户输入的内容
@@ -50,7 +48,7 @@ public class TestController {
 
     @GetMapping("/resp")
     public ChatResponse resp(@RequestParam String userInput) {
-        ChatResponse chatResponse = chatClient.prompt()
+        ChatResponse chatResponse = defaultChatClient.prompt()
                 .user(userInput)
                 .call()
                 .chatResponse();
@@ -67,7 +65,7 @@ public class TestController {
                         .withModel("qwen-plus")
                         .withTemperature(1.4)
                         .build());
-        ChatResponse chatResponse = chatClient.prompt()
+        ChatResponse chatResponse = defaultChatClient.prompt()
                 .user(userInput)
                 .call()
                 .chatResponse();
@@ -81,7 +79,7 @@ public class TestController {
 
     @GetMapping("/entity")
     public ActorFilms entity(@RequestParam String userInput) {
-        ActorFilms actorFilms = chatClient.prompt()
+        ActorFilms actorFilms = defaultChatClient.prompt()
                 .user(userInput)
                 .call()
                 .entity(ActorFilms.class);
@@ -95,7 +93,7 @@ public class TestController {
 
     @GetMapping("/stream")
     public String stream(@RequestParam String userInput) {
-        Flux<String> flux = chatClient.prompt()
+        Flux<String> flux = defaultChatClient.prompt()
                 .user(userInput)
                 .stream().content();
         String collect = flux.collectList().block().stream().collect(Collectors.joining());
@@ -103,16 +101,4 @@ public class TestController {
         return collect;
     }
 
-
-
-      @GetMapping("/fillText")
-    public Map<String, String> stream(@RequestParam String userInput,@RequestParam String user) {
-       return Map.of("输出结果",
-				this.chatClient.prompt()
-						.system(sp -> sp.param("user", user))
-						.user(userInput)
-						.call()
-						.content());
-    }
-1
 }
