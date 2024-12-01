@@ -4,7 +4,6 @@ package com.example.demo.controller;
 import com.alibaba.cloud.ai.dashscope.chat.DashScopeChatOptions;
 import com.alibaba.fastjson2.JSON;
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,10 +22,6 @@ public class HelloController {
     private final ChatClient defaultChatClient;
 
     public HelloController(ChatClient.Builder builder) {
-        SimpleLoggerAdvisor simpleLoggerAdvisor = new SimpleLoggerAdvisor(
-                request -> "Prompt: " + request.userText(),
-                response -> "Result: " + response.getResult());
-        builder.defaultAdvisors(simpleLoggerAdvisor);
         this.defaultChatClient = builder.build();
     }
 

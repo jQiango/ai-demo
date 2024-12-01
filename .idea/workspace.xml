@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db8caffa-7380-45a1-b922-629a38fef817" name="更改" comment="master">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/EmbedTextController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/GrepConsole.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/SimpleLoggerAdvisor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/prompt/qa-prompt.st" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/ChatClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/config/ChatClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/custom/CusChatModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/custom/CusChatModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/config/ChatClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/EmbedTextController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/PromptTemplateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controller/EmbedTextController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controller/EmbedTextController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +53,26 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="jar://E:/repository/com/alibaba/cloud/ai/spring-ai-alibaba-core/1.0.0-M3.2/spring-ai-alibaba-core-1.0.0-M3.2-sources.jar!/com/alibaba/cloud/ai/dashscope/chat/DashScopeChatOptions.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/repository/com/alibaba/cloud/ai/spring-ai-alibaba-core/1.0.0-M3.2/spring-ai-alibaba-core-1.0.0-M3.2-sources.jar!/com/alibaba/cloud/ai/prompt/ConfigurablePromptTemplateFactory.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/repository/io/projectreactor/reactor-core/3.6.11/reactor-core-3.6.11.jar!/reactor/core/Disposable.class" root0="SKIP_INSPECTION" />
     <setting file="jar://E:/repository/org/springframework/ai/spring-ai-core/1.0.0-M3/spring-ai-core-1.0.0-M3-sources.jar!/org/springframework/ai/chat/client/ChatClient.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/repository/org/springframework/ai/spring-ai-core/1.0.0-M3/spring-ai-core-1.0.0-M3-sources.jar!/org/springframework/ai/chat/client/DefaultChatClient.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/repository/org/springframework/ai/spring-ai-core/1.0.0-M3/spring-ai-core-1.0.0-M3-sources.jar!/org/springframework/ai/chat/client/advisor/SimpleLoggerAdvisor.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/repository/org/springframework/ai/spring-ai-core/1.0.0-M3/spring-ai-core-1.0.0-M3-sources.jar!/org/springframework/ai/chat/client/advisor/api/AdvisedRequest.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/repository/org/springframework/ai/spring-ai-core/1.0.0-M3/spring-ai-core-1.0.0-M3-sources.jar!/org/springframework/ai/chat/client/advisor/api/Advisor.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/repository/org/springframework/ai/spring-ai-core/1.0.0-M3/spring-ai-core-1.0.0-M3-sources.jar!/org/springframework/ai/chat/client/advisor/api/CallAroundAdvisor.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/repository/org/springframework/ai/spring-ai-core/1.0.0-M3/spring-ai-core-1.0.0-M3-sources.jar!/org/springframework/ai/chat/messages/Message.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/repository/org/springframework/ai/spring-ai-core/1.0.0-M3/spring-ai-core-1.0.0-M3-sources.jar!/org/springframework/ai/chat/messages/ToolResponseMessage.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/repository/org/springframework/ai/spring-ai-core/1.0.0-M3/spring-ai-core-1.0.0-M3-sources.jar!/org/springframework/ai/chat/model/ChatModel.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/repository/org/springframework/ai/spring-ai-core/1.0.0-M3/spring-ai-core-1.0.0-M3-sources.jar!/org/springframework/ai/chat/model/ChatResponse.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/repository/org/springframework/ai/spring-ai-core/1.0.0-M3/spring-ai-core-1.0.0-M3-sources.jar!/org/springframework/ai/chat/prompt/ChatOptions.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/repository/org/springframework/ai/spring-ai-core/1.0.0-M3/spring-ai-core-1.0.0-M3-sources.jar!/org/springframework/ai/chat/prompt/Prompt.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/repository/org/springframework/ai/spring-ai-core/1.0.0-M3/spring-ai-core-1.0.0-M3-sources.jar!/org/springframework/ai/model/ModelRequest.java" root0="SKIP_INSPECTION" />
     <setting file="jar://E:/repository/org/springframework/ai/spring-ai-core/1.0.0-M3/spring-ai-core-1.0.0-M3.jar!/org/springframework/ai/chat/client/ChatClient.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/repository/org/springframework/ai/spring-ai-openai/1.0.0-M3/spring-ai-openai-1.0.0-M3-sources.jar!/org/springframework/ai/openai/OpenAiAudioSpeechOptions.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/repository/org/springframework/ai/spring-ai-openai/1.0.0-M3/spring-ai-openai-1.0.0-M3-sources.jar!/org/springframework/ai/openai/OpenAiChatModel.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://E:/repository/org/springframework/ai/spring-ai-openai/1.0.0-M3/spring-ai-openai-1.0.0-M3-sources.jar!/org/springframework/ai/openai/api/OpenAiApi.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="KotlinCodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
@@ -70,32 +93,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.demo [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.DemoApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/wangj/Desktop/demo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.log&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.demo [clean].executor": "Run",
+    "Maven.demo [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.DemoApplication.executor": "Debug",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/wangj/Desktop/demo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -138,7 +163,13 @@
       <workItem from="1731956238447" duration="9830000" />
       <workItem from="1732475431698" duration="168000" />
       <workItem from="1732475607161" duration="195000" />
-      <workItem from="1732542101841" duration="6794000" />
+      <workItem from="1732542101841" duration="9008000" />
+      <workItem from="1732715186266" duration="507000" />
+      <workItem from="1732716205380" duration="604000" />
+      <workItem from="1732716822476" duration="651000" />
+      <workItem from="1732986762748" duration="775000" />
+      <workItem from="1733033655132" duration="942000" />
+      <workItem from="1733034613637" duration="12781000" />
     </task>
     <task id="LOCAL-00001" summary="master">
       <option name="closed" value="true" />
@@ -212,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732542623379</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="master">
+      <option name="closed" value="true" />
+      <created>1732597848097</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732597848097</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +277,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/controller/HelloController.java</url>
-          <line>61</line>
+          <line>56</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
