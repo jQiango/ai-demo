@@ -1,7 +1,4 @@
 /src/main/resources/application.properties
-/target/classes/application.properties
-/target/classes/com/example/demo/controller/HelloController$ActorFilms.class
-/target/classes/com/example/demo/controller/HelloController.class
-/target/classes/com/example/demo/controller/SimpleLoggerAdvisor.class
 /target/
 /.idea/
+/.idea/workspace.xml

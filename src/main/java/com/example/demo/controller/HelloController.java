@@ -10,10 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import reactor.core.publisher.Flux;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("ai")
@@ -41,19 +37,11 @@ public class HelloController {
         return content;
     }
 
-    @GetMapping("/resp")
-    public ChatResponse resp(@RequestParam String userInput) {
-        ChatResponse chatResponse = defaultChatClient.prompt()
-                .user(userInput)
-                .call()
-                .chatResponse();
-        System.err.println(JSON.toJSONString(chatResponse));
-        return chatResponse;
-    }
+
 
 
     //动态指定模型
-    @GetMapping("/resp2")
+    @GetMapping("/assign-model")
     public ChatResponse resp2(@RequestParam String userInput) {
         new Prompt(userInput,
                 DashScopeChatOptions.builder()
@@ -72,28 +60,5 @@ public class HelloController {
         return chatResponse;
     }
 
-    @GetMapping("/entity")
-    public ActorFilms entity(@RequestParam String userInput) {
-        ActorFilms actorFilms = defaultChatClient.prompt()
-                .user(userInput)
-                .call()
-                .entity(ActorFilms.class);
-        System.err.println(JSON.toJSONString(actorFilms));
-        return actorFilms;
-    }
-
-    record ActorFilms(String actor, List<String> movies) {
-
-    }
-
-    @GetMapping("/stream")
-    public String stream(@RequestParam String userInput) {
-        Flux<String> flux = defaultChatClient.prompt()
-                .user(userInput)
-                .stream().content();
-        String collect = flux.collectList().block().stream().collect(Collectors.joining());
-        System.err.println(collect);
-        return collect;
-    }
 
 }

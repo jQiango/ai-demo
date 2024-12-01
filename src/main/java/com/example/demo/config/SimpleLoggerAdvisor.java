@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.demo.config;
 
 import com.alibaba.fastjson2.JSON;
 import lombok.extern.slf4j.Slf4j;

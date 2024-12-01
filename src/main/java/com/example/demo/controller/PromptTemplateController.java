@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.alibaba.cloud.ai.prompt.ConfigurablePromptTemplateFactory;
+import com.example.demo.config.SimpleLoggerAdvisor;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.messages.AssistantMessage;
 import org.springframework.ai.chat.prompt.Prompt;
@@ -23,28 +24,20 @@ public class PromptTemplateController {
     private final ConfigurablePromptTemplateFactory configurablePromptTemplateFactory;
 
 
-    @Value("classpath:/prompts/joke-prompt.st")
+    @Value("classpath:/prompts/test-prompt.st")
     private Resource presetPrompt;
 
     public PromptTemplateController(ChatClient.Builder builder, ConfigurablePromptTemplateFactory configurablePromptTemplateFactory) {
         this.configurablePromptTemplateFactory = configurablePromptTemplateFactory;
+
         SimpleLoggerAdvisor simpleLoggerAdvisor = new SimpleLoggerAdvisor();
         builder.defaultAdvisors(simpleLoggerAdvisor)
-                .defaultSystem("你是一个著名的导演，用国内著名导演{user}的声音描述一些电影相关的问题。");
+//                .defaultSystem("你是一个著名的导演，用国内著名导演{user}的声音描述一些电影相关的问题。")
+        ;
         this.chatClient = builder.build();
     }
 
-
-    @GetMapping("local/prompt")
-    public AssistantMessage completion(@RequestParam(value = "adjective", defaultValue = "funny") String adjective,
-                                       @RequestParam(value = "topic", defaultValue = "cows") String topic) {
-        PromptTemplate promptTemplate = new PromptTemplate(presetPrompt);
-        Prompt prompt = promptTemplate.create(Map.of("adjective", adjective, "topic", topic));
-        return chatClient.prompt(prompt).call().chatResponse().getResult().getOutput();
-    }
-
-
-    @GetMapping("/embed")
+    @GetMapping("local/fill")
     public Map<String, String> stream(@RequestParam String userInput, @RequestParam String user) {
         return Map.of("输出结果",
                 this.chatClient.prompt()
@@ -53,4 +46,15 @@ public class PromptTemplateController {
                         .call()
                         .content());
     }
+
+    @GetMapping("local/prompt")
+    public AssistantMessage completion(@RequestParam(value = "context") String context,
+                                       @RequestParam(value = "question") String question) {
+        PromptTemplate promptTemplate = new PromptTemplate(presetPrompt);
+        Prompt prompt = promptTemplate.create(Map.of("context", context, "question", question));
+        return chatClient.prompt(prompt).call().chatResponse().getResult().getOutput();
+    }
+
+
+
 }
