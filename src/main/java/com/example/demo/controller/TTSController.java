@@ -29,8 +29,6 @@ public class TTSController {
     @Resource
     private SpeechSynthesisModel speechSynthesisModel;
 
-    private static final String TEXT = "白日依山尽，黄河入海流。";
-
     private static final String FILE_PATH = "/Users/jqiang/Downloads/";
 
 
