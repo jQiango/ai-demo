@@ -52,6 +52,11 @@
             <artifactId>spring-ai-alibaba-starter</artifactId>
             <version>1.0.0-M3.2</version>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>4.0.3</version>
+        </dependency>
     </dependencies>
 
 
